@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    margin: 0;
+    font-family: 'Jacquarda Bastarda 9';
+}
+
+.page {
+    font-size: 2rem;
+}  
+
+.hidden {
+    display: none;
+}
+
+.container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px groove rgb(148, 146, 146);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white; /* Initial background color */
+    animation: containerAnimate 4s ease-in-out infinite alternate;
+}
+
+.message {
+    font-size: 2rem;
+    color: #000000;
+}
+
+.click-me {
+    background-color: #3498db;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeInButton 2s ease-in-out infinite alternate;
+}
+
+.click-me:hover {
+    background-color: #2980b9;
+}
+
+.click-me-active {
+    background-color: #1a5276;
+    transform: translateY(-20px);
+}
+
+audio {
+    display: none;
+}
+
+@keyframes fadeInButton {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes containerAnimate {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundColorChange {
+   0% { background-color: #ffffff; }
+    25% { background-color: #b6bbb6; }
+    50% { background-color: hsl(240, 1%, 29%); }
+    75% { background-color: #181817; }
+    100% { background-color: #000000; }
+}
+
+
+.body-colored {
+    animation: backgroundColorChange 4s infinite;
+}
+
